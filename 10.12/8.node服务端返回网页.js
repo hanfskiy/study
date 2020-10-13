@@ -9,7 +9,10 @@ const filePath = path.resolve(__dirname, "./liuwer/index.html");
 // 创建可读流
 const rs = fs.createReadStream(filePath);
 
-/* let str = "";
+/* 
+设置一个空字符串
+let str = "";
+通过chunk写入
 rs.on("data",(chunk)=>{
     str += chunk;
 })
@@ -22,6 +25,7 @@ const server = http.createServer((request, response) => {
     // response.end(str);
 })
 
+// 启动服务
 const port = 1128;
 const host = "192.168.20.80";
 server.listen(port, host, (err) => {
